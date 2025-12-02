@@ -11,7 +11,7 @@ def get_dataloader(batch_size, world_size, rank):
     dataset = datasets.MNIST(root="./data", 
                         train=True, 
                         transform=transforms.ToTensor(), 
-                        download=True)
+                        download=False)
     
     sampler = DistributedSampler(dataset, 
                                  num_replicas=world_size, 
