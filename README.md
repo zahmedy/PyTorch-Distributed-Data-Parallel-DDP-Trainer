@@ -10,8 +10,8 @@ flowchart TD
 
     B --> C[Initialize Process Group]
 
-    C --> D1[Rank 0 Loads Dataset (MNIST)]
-    C --> D2[Rank 1 Loads Dataset (MNIST)]
+    C --> D1[Rank 0 Loads Dataset MNIST]
+    C --> D2[Rank 1 Loads Dataset MNIST]
 
     D1 --> E1[Rank 0 Builds Model]
     D2 --> E2[Rank 1 Builds Model]
@@ -25,7 +25,7 @@ flowchart TD
     G1 --> H1[Rank 0 Backward Pass]
     G2 --> H2[Rank 1 Backward Pass]
 
-    H1 --> I[DDP Gradient Synchronization (All-Reduce)]
+    H1 --> I[DDP Gradient Synchronization All-Reduce]
     H2 --> I
 
     I --> J1[Optimizer Step on Rank 0]
