@@ -37,6 +37,8 @@ flowchart TD
 
     L --> M[End Training]
 
+```
+
 ## What this repo demonstrates
 - Distributed setup with `torch.multiprocessing.spawn` and proper backend selection for CPU/GPU.
 - Simple CNN on MNIST with per-rank distributed samplers.
